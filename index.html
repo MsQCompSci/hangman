@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Import Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link href="style.css" rel="stylesheet" type= "text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    
+    <body>
+        <div class ="container">
+        <!--This h1 has text added to it from the js file-->
+        <h1 id = "title" style ="text-align: center"> Welcome to Hangman</h1>
+        
+        <!-- This creates a button on our page that calls the Display Date function  -->
+        <button type = "button" onclick ="displayDate()">Click to Show Date</button>
+        <!--This p element has the id = today which corresponds to the date object I created in javascript-->
+        <p id ="today"></p>
+        <h3>Instructions:</h3>
+        <p id = "name"></p>
+        <p class = 'row'> Guess the correct letters contained in the word below. <b>Hint: Computational Thinking</b></p>
+        <p class = 'row'>Everytime you guess incorrectly, the counter below increases. When you have 6 incorrect guesses you reach game over.</p>
+        <div class = "row">
+        <!------ This displays what is saved in the randomWord array-->
+        <h1 id="randomWord"></h1>
+        <!---- Idea, Drawing Hangman pngs on right side-->
+        </div>
+        <div class = "row">
+        <!----- This displays the amount of  wrong answers the play has ---->
+        <p id = 'wrong'></p>    
+        <p id = 'guesses'></p>
+        <div class="col"><a class="btn black-text pink lighten-4" type = "button" onclick ="makeGuess()">Click to guess a letter</a></div>
+        </div ><!--Page container div-->
+        <script type ="text/javascript" src ="script.js"></script>
+    </body>
+</html>
